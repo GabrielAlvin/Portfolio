@@ -4,21 +4,20 @@
     padding: 0;
 }
 
-body {
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+body{
+    display: block;
+}
+
+h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 5rem;
 }
 
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    pointer-events: none;
-    filter: none;
+    min-width: 100px;
+    height: 35rem;
 }
 
-.body-site{
-    position: fixed;
+.description{
+    margin-top: 15rem;
 }

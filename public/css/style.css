@@ -4,17 +4,39 @@
     padding: 0;
 }
 
-body {
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+body{
+    display: block;
+}
+
+h1{
+    font-family: 'Staatliches', cursive;
+    font-size: 5rem;
 }
 
 #myVideo {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%; 
-    min-height: 100%;
-    pointer-events: none;
-    filter: none;
+    min-width: 100px;
+    height: 35rem;
 }
+
+.description{
+    margin-top: 15rem;
+}
+
+#wrapper-sidebar{
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin .25s ease-out;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(9,9,121,1)  0%, rgba(2,0,36,1) 100%);
+    color: white;
+    z-index: 999;
+}
+
+#wrapper-sidebar .list{
+    padding: 0.875rem 1.25rem;
+}
+
+#wrapper.toggled #wrapper-sidebar{
+    margin-left: 0;
+}
+
