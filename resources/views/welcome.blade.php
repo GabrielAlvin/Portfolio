@@ -14,8 +14,14 @@
         <link href="{{ url(mix('css/style.css')) }}" rel="stylesheet">
     </head>
     <body class="d-flex h-100 text-center text-white bg-dark">
-        
-        
+        <video autoplay muted loop id="myVideo" class="img-fluid">
+            <source src="{{ asset('videos/mov_bbb.mp4') }}" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+
+        <main class="body-site">
+
+        </main>
         <script src="{{ url(mix('js/bootstrap.blundle.js')) }}"></script>
     </body>
 </html>
