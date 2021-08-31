@@ -14,29 +14,56 @@ h1{
 }
 
 #myVideo {
-    min-width: 100px;
-    height: 35rem;
+    width: 100vw;
+    height: 50rem;
 }
 
 .description{
     margin-top: 15rem;
 }
 
-#wrapper-sidebar{
+.wrapper {
+    width: 100%; 
+}
+
+#sidebar-wrapper {
     min-height: 100vh;
-    margin-left: -15rem;
+    margin-left: -20rem;
+    width: 20rem;
     transition: margin .25s ease-out;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(9,9,121,1)  0%, rgba(2,0,36,1) 100%);
-    color: white;
+    position: absolute;
     z-index: 999;
+    background-color: #040c0e;
+    border-right: solid white 4px;
 }
 
-#wrapper-sidebar .list{
+#sidebar-wrapper .sidebar-heading {
     padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
 }
 
-#wrapper.toggled #wrapper-sidebar{
-    margin-left: 0;
+#page-content-wrapper {
+    min-width: 100vw;
+    padding: 0;
+    min-height: 100vh;
+    transition: all 0.3s; 
 }
 
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0rem;
+}
+
+#wrapper.toggled #page-content-wrapper{
+    width: 100vw;
+}
+
+.list-menu-style{
+    width: 100%;
+    margin-top: 1rem !important;
+    right: 0;
+    left: auto !important;
+}
+
+#menu-toggle:hover{
+    color: white;
+}
