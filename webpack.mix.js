@@ -24,6 +24,8 @@ mix
     .scripts('node_modules/bootstrap/dist/js/bootstrap.bundle.js', 'public/js/bootstrap.blundle.js')
     .scripts('node_modules/jquery/dist/jquery.js', 'public/js/jquery.js')
     .scripts('node_modules/vide/dist/jquery.vide.js', 'public/js/jquery.vide.js')
+    .scripts('resources/js/main.js', 'public/js/main.js')
+
     //Font Awesome
     .copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'public/webfonts')
 

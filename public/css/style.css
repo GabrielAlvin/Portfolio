@@ -1,11 +1,28 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: #040c0e; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 body{
     display: block;
+    overflow-x: hidden;
 }
 
 h1{
@@ -15,11 +32,21 @@ h1{
 
 #myVideo {
     width: 100vw;
-    height: 50rem;
+    height: 45rem;
 }
 
 .description{
     margin-top: 15rem;
+}
+
+#citacao{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#menu-toggle{
+    border-radius: 0px 0px 0px 15px;
+    transition: .25s ease-out;
 }
 
 .wrapper {
@@ -28,13 +55,13 @@ h1{
 
 #sidebar-wrapper {
     min-height: 100vh;
-    margin-left: -20rem;
-    width: 20rem;
+    margin-left: -15rem;
+    width: 15rem;
     transition: margin .25s ease-out;
-    position: absolute;
+    position: fixed;
     z-index: 999;
     background-color: #040c0e;
-    border-right: solid white 4px;
+    border-right: solid white 2px;
 }
 
 #sidebar-wrapper .sidebar-heading {
@@ -57,13 +84,64 @@ h1{
     width: 100vw;
 }
 
-.list-menu-style{
-    width: 100%;
-    margin-top: 1rem !important;
-    right: 0;
-    left: auto !important;
+.btnn {
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 1rem;
+    transition: all 0.5s;
 }
 
-#menu-toggle:hover{
-    color: white;
+.btnn .tittle-span {
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.btnn .tittle-span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.btnn:hover .tittle-span {
+    padding-right: 25px;
+}
+
+.btnn:hover .tittle-span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.border-link-center {
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.border-link-center:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 51%;
+  right: 51%;
+  bottom: 0;
+  background: #040c0e;
+  height: 4px;
+  transition-property: left, right;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+}
+
+.border-link-center:hover:before, .border-link-center:focus:before{
+    left: 0;
+    right: 0;
 }
